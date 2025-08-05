@@ -56,5 +56,23 @@ eval(dT_dy)
 # usethis::use_git() - This creates a local repo
 # usethis::use_github() - This connects local repo to a remote repo
 
+#Another little change for ya
+
+#Plotting example
+
+library(tidyverse)
+library(palmerpenguins)
+
+# create plot ----
+ggplot(data = penguins, aes(x = body_mass_g, y = flipper_length_mm)) +
+   geom_point(aes(color = species)) +
+   scale_color_manual(values = c("darkorange", "purple", "cyan4")) +
+   labs(x = "Body mass (g)",
+         y = "Flipper length (mm)",
+         title = "Palmer penguin size measurements",
+         subtitle = "Palmer Archipelago, Antarctica (2007 - 2009)",
+         caption = "Collected by Dr. Kristen Gorman and colleagues at Palmer Station LTER") +
+ facet_wrap(~island) +
+ theme_minimal()
 
 
