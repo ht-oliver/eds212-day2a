@@ -51,7 +51,10 @@ dT_dy
 y <- seq(from = -0.4, to = 2.0, by = 0.1)
 eval(dT_dy)
 
-
+# install.packages("usethis")
+# library(usethis)
+# usethis::use_git() - This creates a local repo
+# usethis::use_github() - This connects local repo to a remote repo
 
 
 
